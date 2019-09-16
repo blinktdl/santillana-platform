@@ -156,9 +156,36 @@ Object.defineProperty(exports,"__esModule",{value:true});var _createClass=functi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var Header=function(){function Header(){_classCallCheck(this,Header);}_createClass(Header,[{key:'init',value:function init(){this.menuDesplegable();this.fondoPagina();this.mainNav();this.addOnScrollEvent();this.mainNavCheckIfNeedToAddBackground();}},{key:'menuDesplegable',value:function menuDesplegable(){//Menú desplegable
-var menuButton=document.querySelector('#main-nav-launcher');// remove children
-if(menuButton){while(menuButton.firstChild){menuButton.removeChild(menuButton.firstChild);}var div1=document.createElement('div');var div2=document.createElement('div');var div3=document.createElement('div');menuButton.appendChild(div1);menuButton.appendChild(div2);menuButton.appendChild(div3);}}},{key:'fondoPagina',value:function fondoPagina(){var div=document.createElement('div');div.classList.add('sm-body-background');document.body.insertBefore(div,document.body.childNodes[0]);}},{key:'mainNav',value:function mainNav(){var mainNav=document.querySelector('#main-nav');var _this=this;if(mainNav){var mainNavObserver=new MutationObserver(function(event){_this.mainNavCheckIfIsOpenAndAddClass();});mainNavObserver.observe(mainNav,{attributes:true,attributeFilter:['class'],childList:false,characterData:false});this.mainNavCheckIfIsOpenAndAddClass();}}},{key:'mainNavCheckIfIsOpenAndAddClass',value:function mainNavCheckIfIsOpenAndAddClass(){var mainNav=document.querySelector('#main-nav');if(mainNav.classList.contains('open')){document.body.classList.add('main-mav--is-open');}else{document.body.classList.remove('main-mav--is-open');}}},{key:'addOnScrollEvent',value:function addOnScrollEvent(){document.addEventListener('scroll',this.mainNavCheckIfNeedToAddBackground);}},{key:'mainNavCheckIfNeedToAddBackground',value:function mainNavCheckIfNeedToAddBackground(){var mainNav=document.querySelector('#main-nav');if(mainNav){var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;if(scrollTop>68){mainNav.classList.add('main-nav--width-backgrounds');}else{mainNav.classList.remove('main-nav--width-backgrounds');}}}}]);return Header;}();exports.default=Header;
+Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var Header=function(){function Header(){_classCallCheck(this,Header);}_createClass(Header,[{key:'init',value:function init(){this.menuDesplegable();this.fondoPagina();this.mainNav();// this.addOnScrollEvent();
+// this.mainNavCheckIfNeedToAddBackground();
+}},{key:'menuDesplegable',value:function menuDesplegable(){var _this2=this;//Menú desplegable
+var menuButton=document.querySelector('#main-nav-launcher');//remove blink.theme.toggleMainNav()
+$('#main-nav-launcher').unbind();$('#main-nav-launcher').click(function(){var windowWidth=window.innerWidth;if(windowWidth>=768){$("html, body").animate({scrollTop:0},"slow");}blink.theme.toggleMainNav();_this2.mainNavCheckIfIsOpenAndAddClass();});if(menuButton){// remove children
+while(menuButton.firstChild){menuButton.removeChild(menuButton.firstChild);}//Add lines
+var div1=document.createElement('div');var div2=document.createElement('div');var div3=document.createElement('div');menuButton.appendChild(div1);menuButton.appendChild(div2);menuButton.appendChild(div3);}}},{key:'fondoPagina',value:function fondoPagina(){var div=document.createElement('div');div.classList.add('sm-body-background');document.body.insertBefore(div,document.body.childNodes[0]);}},{key:'mainNav',value:function mainNav(){var mainNav=document.querySelector('#main-nav');var _this=this;if(mainNav){// const mainNavObserver = new MutationObserver(function (event) {
+// 	_this.mainNavCheckIfIsOpenAndAddClass();
+// });
+// mainNavObserver.observe(mainNav, {
+// 	attributes: true, 
+// 	attributeFilter: ['class'],
+// 	childList: false, 
+// 	characterData: false
+// });
+this.mainNavCheckIfIsOpenAndAddClass();}}},{key:'mainNavCheckIfIsOpenAndAddClass',value:function mainNavCheckIfIsOpenAndAddClass(){var mainNav=document.querySelector('#main-nav');if(mainNav.classList.contains('open')){document.body.classList.add('main-mav--is-open');$("html, body").animate({scrollTop:0},"slow");}else{document.body.classList.remove('main-mav--is-open');}}// addOnScrollEvent(){
+// 	document.addEventListener('scroll', this.mainNavCheckIfNeedToAddBackground);
+// }
+// mainNavCheckIfNeedToAddBackground(){
+// 	const mainNav = document.querySelector('#main-nav');
+// 	if(mainNav){
+// 		const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+// 		if(scrollTop>68){
+// 			mainNav.classList.add('main-nav--width-backgrounds');
+// 		} else {
+// 			mainNav.classList.remove('main-nav--width-backgrounds');
+// 		}
+// 	}
+// }
+}]);return Header;}();exports.default=Header;
 
 /***/ }),
 /* 8 */
