@@ -193,7 +193,23 @@ this.mainNavCheckIfIsOpenAndAddClass();}}},{key:'mainNavCheckIfIsOpenAndAddClass
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _header=__webpack_require__(7);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(6);var _footer2=_interopRequireDefault(_footer);var _generalContentShadow=__webpack_require__(5);var _generalContentShadow2=_interopRequireDefault(_generalContentShadow);var _content=__webpack_require__(4);var _content2=_interopRequireDefault(_content);var _fichaAlumno=__webpack_require__(1);var _fichaAlumno2=_interopRequireDefault(_fichaAlumno);var _mensajes=__webpack_require__(0);var _mensajes2=_interopRequireDefault(_mensajes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var header=new _header2.default();var footer=new _footer2.default();var generalContentShadow=new _generalContentShadow2.default();var content=new _content2.default();var fichaAlumno=new _fichaAlumno2.default();var mensajes=new _mensajes2.default();var SantillanaPlatform=function(){function SantillanaPlatform(){_classCallCheck(this,SantillanaPlatform);this.state={isLaunched:false};}_createClass(SantillanaPlatform,[{key:'init',value:function init(){console.log('%c Prisma ','font-size: 40px; font-weight: 700; color: white; background-color: #2a495d;');console.log("Iniciando...");header.init();footer.init();generalContentShadow.init();content.init();fichaAlumno.init();mensajes.init();//TEMPORAL
+Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _header=__webpack_require__(7);var _header2=_interopRequireDefault(_header);var _footer=__webpack_require__(6);var _footer2=_interopRequireDefault(_footer);var _generalContentShadow=__webpack_require__(5);var _generalContentShadow2=_interopRequireDefault(_generalContentShadow);var _content=__webpack_require__(4);var _content2=_interopRequireDefault(_content);var _fichaAlumno=__webpack_require__(1);var _fichaAlumno2=_interopRequireDefault(_fichaAlumno);var _mensajes=__webpack_require__(0);var _mensajes2=_interopRequireDefault(_mensajes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}// import ScrollBar from './__scrollbar';
+var header=new _header2.default();var footer=new _footer2.default();var generalContentShadow=new _generalContentShadow2.default();var content=new _content2.default();var fichaAlumno=new _fichaAlumno2.default();var mensajes=new _mensajes2.default();// const scrollBar = new ScrollBar();
+var SantillanaPlatform=function(){function SantillanaPlatform(){_classCallCheck(this,SantillanaPlatform);this.state={isLaunched:false};}_createClass(SantillanaPlatform,[{key:'init',value:function init(){console.log('%c Prisma ','font-size: 40px; font-weight: 700; color: white; background-color: #2a495d;');console.log("Iniciando...");header.init();footer.init();generalContentShadow.init();content.init();fichaAlumno.init();mensajes.init();// const scrollBarMutationObserver = new MutationObserver(function(mutations) {
+// 	mutations.forEach(function(mutation) {
+// 		scrollBar.init();
+// 	});
+// });
+// scrollBarMutationObserver.observe(document.body, {
+// 	attributes: false,
+// 	characterData: false,
+// 	childList: true,
+// 	subtree: false,
+// 	attributeOldValue: false,
+// 	characterDataOldValue: false
+// });
+// scrollBar.init();
+//TEMPORAL
 // if(document.querySelector('.js-ficha.alumno.padre_nodef.padre_noreg')){
 // 	const el = document.querySelector('.js-ficha.alumno.padre_nodef.padre_noreg');
 // 	el.querySelector('a.alumno-element').innerHTML = 'Ver ficha';
